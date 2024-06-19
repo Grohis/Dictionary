@@ -1,0 +1,16 @@
+a = input()
+value = [i.lower() for i in a]
+
+# Создаем словарь для подсчета частоты каждого символа
+frequency = {}
+
+for i in value:
+    if i in frequency:
+        frequency[i] += 1
+    else:
+        frequency[i] = 1
+
+# Находим максимальную частоту
+mx = max(frequency.values())
+
+print(mx)
