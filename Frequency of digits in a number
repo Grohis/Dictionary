@@ -1,0 +1,16 @@
+# Ввод строки от пользователя
+nubmers_str = input()
+
+# Инициализируем словарь для хранения частоты каждого символа
+frequency = {}
+
+# Перебираем каждый символ в строке
+for char in nubmers_str:
+    if char in frequency:
+        frequency[char] += 1
+    else:
+        frequency[char] = 1
+
+# Перебираем отсортированные по ключам элементы словаря
+for char, count in sorted(frequency.items()):
+    print(f'{char} {count}')
